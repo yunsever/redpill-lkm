@@ -128,7 +128,7 @@ bool shim_bios_module(const struct hw_config *hw, struct module *mod, unsigned l
     SHIM_TO_NULL_ZERO_INT(VTK_SET_FAN_STATE);
     SHIM_TO_NULL_ZERO_INT(VTK_SET_DISK_LED);
     SHIM_TO_NULL_ZERO_INT(VTK_SET_PWR_LED);
-    SHIM_TO_NULL_ZERO_INT(VTK_SET_GPIO_PIN);
+    // SHIM_TO_NULL_ZERO_INT(VTK_SET_GPIO_PIN);
     _shim_bios_module_entry(VTK_GET_GPIO_PIN, shim_get_gpio_pin_usable);
     _shim_bios_module_entry(VTK_SET_GPIO_PIN, shim_set_gpio_pin_usable);
     SHIM_TO_NULL_ZERO_INT(VTK_SET_GPIO_PIN_BLINK);
