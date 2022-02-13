@@ -29,6 +29,7 @@ static int shim_set_gpio_pin_usable(int *pin)
     pr_loc_dbg("set_gpio pin info 0  %d", pin[0]);
     pr_loc_dbg("set_gpio pin info 1  %d", pin[1]);
     pr_loc_dbg("set_gpio pin info 2  %d", pin[2]);
+    pr_loc_dbg("set_gpio pin info 3  %d", pin[3]);
     return 0;
 }
 
