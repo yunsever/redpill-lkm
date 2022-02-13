@@ -28,7 +28,8 @@ static int shim_set_gpio_pin_usable(int *pin)
 {
     pr_loc_dbg("set_gpio pin info 0  %d", pin[0]);
     pr_loc_dbg("set_gpio pin info 1  %d", pin[1]);
-    return 1;
+    pr_loc_dbg("set_gpio pin info 2  %d", pin[2]);
+    return 0;
 }
 
 static int bios_get_buz_clr(unsigned char *state)
