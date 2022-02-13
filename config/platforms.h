@@ -60,14 +60,14 @@ const struct hw_config supported_platforms[] = {
         .pci_stubs = {
                 { .type = VPD_MARVELL_88SE9235, .bus = 0x09, .dev = 0x00, .fn = 0x00, .multifunction = false },
                 { .type = VPD_MARVELL_88SE9235, .bus = 0x0c, .dev = 0x00, .fn = 0x00, .multifunction = false },
+		{ .type = VPD_INTEL_X552,          .bus = 0x04, .dev = 0x00, .fn = 0x01, .multifunction = false },
 		{ .type = VPD_INTEL_X552,          .bus = 0x04, .dev = 0x00, .fn = 0x00, .multifunction = false },
-		{ .type = VPD_INTEL_X552,          .bus = 0x05, .dev = 0x00, .fn = 0x00, .multifunction = false },
                 { .type = __VPD_TERMINATOR__ }
         },
         .emulate_rtc = false,
         .swap_serial = false,
         .reinit_ttyS0 = true,
-        .fix_disk_led_ctrl = true,
+        .fix_disk_led_ctrl = false,
         .has_cpu_temp = true,
         .hwmon = {
             .sys_thermal = { HWMON_SYS_TZONE_REMOTE1_ID, HWMON_SYS_TZONE_LOCAL_ID, HWMON_SYS_TZONE_REMOTE2_ID },
