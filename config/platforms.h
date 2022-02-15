@@ -60,8 +60,6 @@ const struct hw_config supported_platforms[] = {
         .pci_stubs = {
                 { .type = VPD_MARVELL_88SE9235, .bus = 0x09, .dev = 0x00, .fn = 0x00, .multifunction = false },
                 { .type = VPD_MARVELL_88SE9235, .bus = 0x0c, .dev = 0x00, .fn = 0x00, .multifunction = false },
-		{ .type = VPD_INTEL_X552,          .bus = 0x04, .dev = 0x00, .fn = 0x01, .multifunction = true },
-		{ .type = VPD_INTEL_X552,          .bus = 0x04, .dev = 0x00, .fn = 0x00, .multifunction = true },
                 { .type = __VPD_TERMINATOR__ }
         },
         .emulate_rtc = false,
