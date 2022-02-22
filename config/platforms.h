@@ -83,7 +83,7 @@ const struct hw_config supported_platforms[] = {
                 { .type = VPD_MARVELL_88SE9235,    .bus = 0x01, .dev = 0x00, .fn = 0x00, .multifunction = false },
                 { .type = __VPD_TERMINATOR__ }
         },
-        .emulate_rtc = false,
+        .emulate_rtc = true,
         .swap_serial = false,
         .reinit_ttyS0 = true,
         .fix_disk_led_ctrl = true,
