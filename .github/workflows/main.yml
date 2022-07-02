@@ -28,14 +28,14 @@ jobs:
         id: build
         run: |
           ./compile-lkms.sh
-          zip -9 rp-lkms.zip /output/*
+          zip -9 rp-lkms.zip output/*
 
       # Upload img
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
           name: Upload lkms
-          path: /output
+          path: output
 
       # Publish a release if is a tag
       - name: Release

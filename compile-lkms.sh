@@ -3,7 +3,7 @@
 set -e
 
 TMP_PATH="/tmp"
-DEST_PATH="/output"
+DEST_PATH="output"
 
 mkdir -p "${DEST_PATH}"
 
