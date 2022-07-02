@@ -28,7 +28,7 @@ jobs:
         id: build
         run: |
           ./compile-lkms.sh
-          zip -9 rp-lkms.zip output/*
+          zip -9 rp-lkms.zip -j output/*
 
       # Upload img
       - name: Upload lkms
