@@ -7,7 +7,7 @@ DEST_PATH="output"
 
 mkdir -p "${DEST_PATH}"
 
-curl -LO "https://github.com/${GITHUB_REPOSITORY_OWNER}/arpl/raw/main/PLATFORMS"
+curl -LO "https://github.com/fbelavenuto/arpl/raw/main/PLATFORMS"
 
 # Main
 while read PLATFORM KVER; do
