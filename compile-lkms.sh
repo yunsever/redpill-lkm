@@ -15,5 +15,7 @@ while read PLATFORM KVER; do
   docker run --rm -t --user `id -u` -v "${TMP_PATH}":/output \
     -v "${PWD}":/input fbelavenuto/syno-compiler compile-lkm ${PLATFORM}
   mv "${TMP_PATH}/redpill-dev.ko" "${DEST_PATH}/rp-${PLATFORM}-${KVER}-dev.ko"
+  gzip "${DEST_PATH}/rp-${PLATFORM}-${KVER}-dev.ko"
   mv "${TMP_PATH}/redpill-prod.ko" "${DEST_PATH}/rp-${PLATFORM}-${KVER}-prod.ko"
+  gzip "${DEST_PATH}/rp-${PLATFORM}-${KVER}-prod.ko"
 done < PLATFORMS
