@@ -13,10 +13,11 @@ function compileLkm() {
   PLATFORM=$1
   KVER=$2
   OUT_PATH="${TMP_PATH}/${PLATFORM}"
+  VER="7.1"
   mkdir -p "${OUT_PATH}"
   # Compile using docker
-  docker run --rm -t --user `id -u` -v "${OUT_PATH}":/output \
-    -v "${PWD}":/input fbelavenuto/syno-compiler compile-lkm ${PLATFORM}
+  docker run --rm -t -v "${OUT_PATH}":/output -v "${PWD}":/input \
+    fbelavenuto/syno-toolkit:${PLATFORM}-${VER} compile-lkm
   mv "${OUT_PATH}/redpill-dev.ko" "${DEST_PATH}/rp-${PLATFORM}-${KVER}-dev.ko"
   rm -f "${DEST_PATH}/rp-${PLATFORM}-${KVER}-dev.ko.gz"
   gzip "${DEST_PATH}/rp-${PLATFORM}-${KVER}-dev.ko"
