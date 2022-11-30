@@ -7,7 +7,11 @@ DEST_PATH="output"
 
 mkdir -p "${DEST_PATH}"
 
-curl -sLO "https://github.com/fbelavenuto/arpl/raw/main/PLATFORMS"
+if [ -f ../arpl/PLATFORMS ]; then
+  cp ../arpl/PLATFORMS PLATFORMS
+else
+  curl -sLO "https://github.com/fbelavenuto/arpl/raw/main/PLATFORMS"
+fi
 
 function compileLkm() {
   PLATFORM=$1
