@@ -180,7 +180,18 @@ struct MfgCompatCPUState {
 enum MfgCompatCopyBtnState {
     MFGC_BTN_DOWN = 0, //aka pressed
     MFGC_BTN_UP = 1, //aka not pressed
-};
+}; 
+
+typedef enum {
+    POWER_STATUS_BAD = 0,
+    POWER_STATUS_GOOD,
+} SYNO_POWER_STATUS;
+
+typedef struct _tag_POWER_INFO {
+    SYNO_POWER_STATUS power_1;
+    SYNO_POWER_STATUS power_2;
+} POWER_INFO;
+
 
 typedef int (*mfgc_void_cb)(void); //int f(void)
 typedef int (*mfgc_time_cb)(struct MfgCompatTime *); //int f(MfgCompatTime *)
