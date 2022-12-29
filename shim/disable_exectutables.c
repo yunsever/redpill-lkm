@@ -9,6 +9,7 @@
 #define BOOTLOADER_UPDATE1_PATH "uboot_do_upd.sh"
 #define BOOTLOADER_UPDATE2_PATH "./uboot_do_upd.sh"
 #define SAS_FW_UPDATE_PATH "/tmpData/upd@te/sas_fw_upgrade_tool"
+#define OOB_FW_UPDATE_PATH "/usr/syno/sbin/syno_oob_fw_upgrade"
 
 int register_disable_executables_shim(void)
 {
