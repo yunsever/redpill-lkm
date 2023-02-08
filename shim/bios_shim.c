@@ -127,7 +127,7 @@ static int bios_module_notifier_handler(struct notifier_block * self, unsigned l
         bios_shimmed = true;
         pr_loc_inf("%s BIOS *fully* shimmed", mod->name);
     } else { //MODULE_STATE_COMING or MODULE_STATE_UNFORMED [but most likely actually MODULE_STATE_COMING]
-        if (likely(state == MODULE_STATE_COMING)){
+        if (likely(state == MODULE_STATE_COMING)) {
             register_bios_hwcap_shim(hw_config);
             register_bios_psu_status_shim(hw_config);
         }
