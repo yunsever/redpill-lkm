@@ -4,13 +4,12 @@ set -e
 
 TMP_PATH="/tmp"
 DEST_PATH="output"
-TOOLKIT_VER="7.1"
+TOOLKIT_VER="latest"
 
 mkdir -p "${DEST_PATH}"
 
 if [ ! -f PLATFORMS ]; then
-  echo "Pls input 'PLATFORM' 'KVER' to PLATFORMS file."
-  exit 1
+  curl -sLO "https://github.com/fbelavenuto/arpl/raw/main/docker/syno-compiler/PLATFORMS"
 fi
 
 function compileLkm() {
@@ -34,6 +33,7 @@ function compileLkm() {
 }
 
 # Main
+cat PLATFORMS
 docker pull fbelavenuto/syno-compiler:${TOOLKIT_VER}
 while read PLATFORM KVER; do
 #  docker pull fbelavenuto/syno-toolkit:${PLATFORM}-${TOOLKIT_VER}
