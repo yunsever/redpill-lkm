@@ -82,9 +82,9 @@ jobs:
           - version: 7.1
             platform: denverton
             parm: 'dev-v7 prod-v7 test-v7'
-          - version: 7.1
-            platform: epyc7002
-            parm: 'dev-v7 prod-v7 test-v7'
+          #- version: 7.1
+          #  platform: epyc7002
+          #  parm: 'dev-v7 prod-v7 test-v7'
           - version: 7.1 
             platform: geminilake
             parm: 'dev-v7 prod-v7 test-v7'
@@ -116,9 +116,9 @@ jobs:
           - version: 7.2
             platform: denverton
             parm: 'dev-v7 prod-v7 test-v7'
-          #- version: 7.2
-          #  platform: epyc7002
-          #  parm: 'dev-v7 prod-v7 test-v7'
+          - version: 7.2
+            platform: epyc7002
+            parm: 'dev-v7 prod-v7 test-v7'
           - version: 7.2 
             platform: geminilake
             parm: 'dev-v7 prod-v7 test-v7'
